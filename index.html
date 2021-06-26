@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <h1>Flight Search Engine</h1>
+    </div>
+
+    <!-- The flexible grid (content) -->
+    <div class="row">
+
+        <div class="side">
+            <div class="inside">
+                <div class="tab">
+                    <button class="tablinks" onclick="flightType(event, 'oneWayDiv')">One way</button>
+                    <button class="tablinks" onclick="flightType(event, 'returnDiv')">Return</button>
+                </div>
+
+                
+                <div id="oneWayDiv" class="tabcontent">
+                    <form>
+                        <div class="displayInlineBlock" style="height:60px;">
+                            <input type="text" placeholder="Enter Origin City">
+                        </div>
+                        <div class="displayInlineBlock" style="height:60px;">
+                            <input type="text" placeholder="Enter Destination City">
+                        </div>
+                        <div class="displayInlineBlock" style="height:60px;">
+                            <label for="departure-date">Departure date:</label> <br>
+                            <input type="date" id="departure-date" placeholder="Departure date">
+                        </div>
+                        <div class="displayInlineBlock" style="height:60px; ">
+                            <button type="submit" value="Search">Search</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div id="returnDiv" class="tabcontent">
+                    <form id="oneWay" action="" method="post">
+                        <div class="displayInlineBlock" style="height:60px;">
+                            <input type="text" name="originCity" id="originCity" placeholder="Enter Origin City">
+                        </div>
+                        <div class="displayInlineBlock" style="height:60px;">
+                            <input type="text" name="destinationCity" id="destinationCity"
+                                placeholder="Enter Destination City">
+                        </div>
+                        <div class="displayInlineBlock" style="height:60px;">
+                            <label for="departureDate">Departure date:</label> <br>
+                            <input type="date" name="departureDate" id="departureDate" placeholder="Departure date">
+                        </div>
+                        <div class="displayInlineBlock" style="height:60px;">
+                            <label for="returnDate">Arrival date:</label> <br>
+                            <input type="date" name="returnDate" id="returnDate" placeholder="Return date">
+                        </div>
+                        <div class="displayInlineBlock" style="height:60px; ">
+                            <button type="submit" value="Search">Search</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="main">
+            <div class="row">
+                <div style="width: 60%;">
+                    <ul class="breadcrumb">
+                        <li><a href="#">Delhi</a></li>
+                        <li><a href="#">Pune</a></li>
+                        <li><a href="#">Delhi</a></li>
+                    </ul>
+                </div>
+                <div style="width: 40%;">
+                    <p style=" text-align: right;">Depart: <span class="departureDateDisplay"></span> </p>
+                    <p style=" text-align: right;">Return: <span class="arrivalDateDisplay"></span> </p></p>
+                </div>
+            </div>
+            <br>
+        
+            <div id="cardsContainer"></div>
+            
+        </div>
+    </div>
+    </div>
+
+</body>
+<script src="assets/js/index.js"></script>
+
+</html>
